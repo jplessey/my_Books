@@ -15,13 +15,13 @@ Furthermore, rethinking the front-end appearance and adding an API endpoint to g
 ## Requirements: 
 python_version = 3.6+
 
-Create a  virtual environment to run it locally. 
+## Run it locally 
+Create a  virtual environment. 
 
-Run `pip install -r requirements.txt`
-To install all dependencies.
+Run  `pip install -r requirements.txt`  to install all dependencies.
 
-Run `python app.py` 
-Go to http://127.0.0.1:5000/ and start a books collection.
+Run  `python app.py`  and go to http://127.0.0.1:5000/ to start a books collection.
 
 See my_Books in action:
+![my_Books - Animated gif demo](images/my_Boooks_in _action_1.gif)
 
