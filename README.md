@@ -30,10 +30,11 @@ Run  `python app.py`  and go to http://127.0.0.1:5000/ to start a books collecti
 <p align="center">
 <img src="images/my_Boooks_in _action_1.gif">
 </p>
+
 ### Edit a book
-
+<p align="center">
 <img src="images/my_Boooks_in _action_2.gif">
-
+</p>
 
 ### Delete a book. API access
 
