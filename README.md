@@ -27,9 +27,11 @@ Add a book
 
 <img src="images/my_Boooks_in _action_1.gif">
 
+
 Edit a book
 
 <img src="images/my_Boooks_in _action_2.gif">
+
 
 Delete a book. API access
 
