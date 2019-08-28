@@ -23,5 +23,6 @@ Run  `pip install -r requirements.txt`  to install all dependencies.
 Run  `python app.py`  and go to http://127.0.0.1:5000/ to start a books collection.
 
 See my_Books in action:
-![my_Books - Animated gif demo](images/my_Boooks_in _action_1.gif)
+
+<img src="images/my_Boooks_in _action_1.gif">
 
