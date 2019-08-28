@@ -26,7 +26,7 @@ Run  `pip install -r requirements.txt`  to install all dependencies.
 Run  `python app.py`  and go to http://localhost:5000/ to start a book collection.
 
 ## See my_Books in action:
-### Add a book
+### Adding a book
 <p align="center">
 <img src="images/my_Boooks_in _action_1.gif">
 </p>
