@@ -36,6 +36,7 @@ Run  `python app.py`  and go to http://localhost:5000/ to start a book collectio
 <img src="images/my_Boooks_in _action_2.gif">
 </p>
 
+
 ### Deleting a book and API access
 <p align="center">
 <img src="images/my_Boooks_in _action_3.gif">
