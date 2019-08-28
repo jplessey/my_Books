@@ -1,0 +1,116 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<header class="masthead" id="top">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-uppercase text-white font-weight-bold">my_Books</h1>
+            </div>
+        </div>
+    </div>
+     <hr class="divider xl-8">
+
+    <div class="container" id="add_book">
+        <div class="btn-group  dropright">
+            <button type="button" class="btn btn-outline-warning btn-l dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span style="font-size: 1.2em;">
+                    <i class="fas fa-plus"></i> <i class="fas fa-book"></i>
+                </span>
+            </button>
+            <div class="dropdown-menu">
+                <div class="container">
+                    <form class="form-inline" action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" class="form-control mr-sm-5" maxlength="100" name="name" placeholder="Title">
+                            <input type="text" class="form-control mr-sm-5" maxlength="100" name="author" placeholder="Author">
+                            <input type="text" class="form-control mr-sm-5" maxlength="80" name="genre" placeholder="Genre">
+                            <button class="btn btn-outline-success btn-sm" type="submit">Add book</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <div class="container">
+        <br>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show justify-content-center text-center" role="alert">{{ message }}<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button></div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </div>
+
+    <br>
+
+    <ol>
+        {% for book in books %}
+        <li class="h4 mb-2"><strong>{{book.title}}</strong> by {{book.author}} <p id="genre">{{book.genre}}</p>  </li>
+        <div class="btn-group dropright">
+
+            <button id="boton-edit" class="btn btn-outline-warning btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-edit"></i>
+            </button>
+            <div class="dropdown-menu">
+                <div class="container">
+                    <form class="form-inline" action="{{ url_for('editBook',book_id = book.id)}}" method="post">
+                        <div class="form-group">
+                            <label for="name" class="mr-sm-1">Title:</label>
+                            <input type="text" class="form-control mr-sm-1" maxlength="100" name="name" value="{{ book.title }}">
+
+                            <label for="author" class="mr-sm-1">Author:</label>
+                            <input type="text" class="form-control mr-sm-1" maxlength="100" name="author" value="{{ book.author }}">
+
+                            <label for="genre" class="mr-sm-1">Genre:</label>
+                            <input type="text" class="form-control mr-sm-1" maxlength="100" name="genre" value="{{ book.genre }}">
+                            <button class="btn btn-outline-success btn-sm" type="submit">Edit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-group dropright">
+            <button class="btn btn-outline-warning btn-sm dropdown-toggle" type="button" data-toggle="dropdown"><i class="fas fa-trash-alt"></i>
+            </button>
+            <div class="dropdown-menu">
+                <div class="container">
+                    <form class="form-inline" action="{{ url_for('deleteBook', book_id = book.id)}}" method="post">
+                        <label for="" class="mr-sm-2">Are you sure you want to delete&nbsp;<strong>{{ book.title}}</strong>?</label>
+                        <form action="#" method='post'>
+                            <button class="btn btn-outline-success btn-sm" type="submit">Yes</button>
+                        </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+        {% endfor %}
+    </ol>
+</div>
+
+<footer class="bg-light py-5">
+    <div class="container">
+        <div class="small text-center text-muted"><a class="btn btn-outline-warning btn-l" href="#top" role="button"><span style="font-size: 1.4em;"><i class="fas fa-chevron-circle-up"></i>
+        </span></a></div>
+        <div class="small text-center text-muted">my_Books</div>
+    </div>
+
+<br>
+
+<div class="container text-center">
+<a class="btn btn-outline-dark" href="http://localhost:5000/api/all-books" target="_blank" role="button">API</a>
+</div>
+
+</footer>
+
+{% endblock %}
