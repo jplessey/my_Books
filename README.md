@@ -19,7 +19,7 @@ Furthermore, rethinking about the front-end appearance and adding an API endpoin
 python_version = 3.6+
 
 ## Run it locally 
-Create a  virtual environment and then:
+You can create a  virtual environment and then:
 
 Run  `pip install -r requirements.txt`  to install all dependencies.
 
