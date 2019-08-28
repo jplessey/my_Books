@@ -27,9 +27,9 @@ Run  `python app.py`  and go to http://127.0.0.1:5000/ to start a books collecti
 
 ## See my_Books in action:
 ### Add a book
-
+<p align="center">
 <img src="images/my_Boooks_in _action_1.gif">
-
+</p>
 ### Edit a book
 
 <img src="images/my_Boooks_in _action_2.gif">
