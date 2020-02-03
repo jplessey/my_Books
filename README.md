@@ -19,11 +19,17 @@ Furthermore, rethinking about the front-end appearance and adding an API endpoin
 python_version = 3.6+
 
 ## Run it locally 
-You can create a  virtual environment and then:
+Create a  virtual environment:
 
-Run  `pip install -r requirements.txt`  to install all dependencies.
+`python3 -m venv env`
 
-Run  `python app.py`  and go to http://localhost:5000/ to start a book collection.
+`source env/bin/activate`
+
+Then:
+
+`pip install -r requirements.txt`  to install all dependencies.
+
+`python app.py`  and go to http://localhost:5000/ to start a book collection.
 
 ## See my_Books in action:
 ### Adding a book
